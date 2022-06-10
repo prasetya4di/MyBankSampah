@@ -1,5 +1,6 @@
 package com.project.banksampah.di.modules
 
+import com.project.banksampah.repository.PickUpRepository
 import com.project.banksampah.usecase.DeletePickUp
 import com.project.banksampah.usecase.GetAllPickUp
 import com.project.banksampah.usecase.GetTotalBalance
@@ -8,32 +9,37 @@ import com.project.banksampah.usecase.impl.DeletePickUpImpl
 import com.project.banksampah.usecase.impl.GetAllPickUpImpl
 import com.project.banksampah.usecase.impl.GetTotalBalanceImpl
 import com.project.banksampah.usecase.impl.RequestPickUpImpl
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
-@InstallIn(ActivityComponent::class)
-abstract class UseCaseModule {
+@InstallIn(SingletonComponent::class)
+class UseCaseModule {
 
-    @Binds
-    abstract fun bindRequestPickUp(
-        requestPickUpImpl: RequestPickUpImpl
-    ): RequestPickUp
+    @Provides
+    @Singleton
+    fun provideRequestPickUp(
+        pickUpRepository: PickUpRepository
+    ): RequestPickUp = RequestPickUpImpl(pickUpRepository)
 
-    @Binds
-    abstract fun bindGetAllPickUp(
-        getAllPickUpImpl: GetAllPickUpImpl
-    ): GetAllPickUp
+    @Provides
+    @Singleton
+    fun provideGetAllPickUp(
+        pickUpRepository: PickUpRepository
+    ): GetAllPickUp = GetAllPickUpImpl(pickUpRepository)
 
-    @Binds
-    abstract fun bindDeletePickUp(
-        deletePickUpImpl: DeletePickUpImpl
-    ): DeletePickUp
+    @Provides
+    @Singleton
+    fun provideDeletePickUp(
+        pickUpRepository: PickUpRepository
+    ): DeletePickUp = DeletePickUpImpl(pickUpRepository)
 
-    @Binds
-    abstract fun bindGetTotalBalance(
-        totalBalanceImpl: GetTotalBalanceImpl
-    ): GetTotalBalance
+    @Provides
+    @Singleton
+    fun provideGetTotalBalance(
+        pickUpRepository: PickUpRepository
+    ): GetTotalBalance = GetTotalBalanceImpl(pickUpRepository)
 }
