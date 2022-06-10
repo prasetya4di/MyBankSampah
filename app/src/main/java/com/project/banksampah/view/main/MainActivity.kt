@@ -8,7 +8,9 @@ import com.project.banksampah.databinding.ContentMainBinding
 import com.project.banksampah.view.history.HistoryActivity
 import com.project.banksampah.view.jenissampah.SampahTypeActivity
 import com.project.banksampah.view.pickup.PickUpActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var contentMainBinding: ContentMainBinding
