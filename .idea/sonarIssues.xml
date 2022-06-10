@@ -73,12 +73,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/usecase/DeletePickUp.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/usecase/GetAllPickUp.kt">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/usecase/RequestPickUp.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/usecase/impl/DeletePickUpImpl.kt">
           <value>
             <set />
           </value>
