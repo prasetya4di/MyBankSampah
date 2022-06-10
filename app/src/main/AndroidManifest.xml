@@ -14,13 +14,13 @@
         android:theme="@style/Theme.BankSampah"
         tools:targetApi="31">
         <activity
-            android:name=".HistoryActivity"
+            android:name=".view.history.HistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".PickUpActivity"
+            android:name=".view.pickup.PickUpActivity"
             android:exported="false" />
         <activity
-            android:name=".SampahTypeActivity"
+            android:name=".view.jenissampah.SampahTypeActivity"
             android:exported="false" />
         <activity
             android:name=".view.main.MainActivity"
