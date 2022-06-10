@@ -1,5 +1,6 @@
 package com.project.banksampah.repository.impl
 
+import androidx.lifecycle.LiveData
 import com.project.banksampah.data.local.pickup.PickUpDao
 import com.project.banksampah.model.entity.PickUp
 import com.project.banksampah.repository.PickUpRepository
@@ -16,5 +17,7 @@ class PickUpRepositoryImpl @Inject constructor(
         pickUpDao.delete(pickUp)
     }
 
-    override fun getAllPickUp(): List<PickUp> = pickUpDao.getAll()
+    override fun getAllPickUp(): LiveData<List<PickUp>> = pickUpDao.getAll()
+
+    override fun getTotalBalance(): LiveData<Int> = pickUpDao.getTotalBalance()
 }
