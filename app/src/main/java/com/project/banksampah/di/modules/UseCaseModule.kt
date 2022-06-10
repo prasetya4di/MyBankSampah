@@ -2,9 +2,11 @@ package com.project.banksampah.di.modules
 
 import com.project.banksampah.usecase.DeletePickUp
 import com.project.banksampah.usecase.GetAllPickUp
+import com.project.banksampah.usecase.GetTotalBalance
 import com.project.banksampah.usecase.RequestPickUp
 import com.project.banksampah.usecase.impl.DeletePickUpImpl
 import com.project.banksampah.usecase.impl.GetAllPickUpImpl
+import com.project.banksampah.usecase.impl.GetTotalBalanceImpl
 import com.project.banksampah.usecase.impl.RequestPickUpImpl
 import dagger.Binds
 import dagger.Module
@@ -29,4 +31,9 @@ abstract class UseCaseModule {
     abstract fun bindDeletePickUp(
         deletePickUpImpl: DeletePickUpImpl
     ): DeletePickUp
+
+    @Binds
+    abstract fun bindGetTotalBalance(
+        totalBalanceImpl: GetTotalBalanceImpl
+    ): GetTotalBalance
 }
