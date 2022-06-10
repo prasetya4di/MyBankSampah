@@ -8,5 +8,5 @@ import javax.inject.Inject
 class GetAllPickUpImpl @Inject constructor(
     private val pickUpRepository: PickUpRepository
 ) : GetAllPickUp {
-    override fun invoke(): List<PickUp> = pickUpRepository.getAllPickUp()
+    override operator fun invoke(): List<PickUp> = pickUpRepository.getAllPickUp()
 }

@@ -8,7 +8,7 @@ import javax.inject.Inject
 class DeletePickUpImpl @Inject constructor(
     private val pickUpRepository: PickUpRepository
 ) : DeletePickUp {
-    override fun invoke(pickUp: PickUp) {
+    override operator fun invoke(pickUp: PickUp) {
         pickUpRepository.delete(pickUp)
     }
 }

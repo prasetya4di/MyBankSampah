@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class RequestPickUpImpl @Inject constructor(private val pickUpRepository: PickUpRepository) :
     RequestPickUp {
-    override fun invoke(pickUp: PickUp) {
+    override operator fun invoke(pickUp: PickUp) {
         pickUpRepository.insert(pickUp)
     }
 }
