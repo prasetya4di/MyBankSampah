@@ -1,6 +1,7 @@
 package com.project.banksampah.view.history
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import com.project.banksampah.model.entity.PickUp
 import com.project.banksampah.usecase.DeletePickUp
 import com.project.banksampah.usecase.GetAllPickUp
@@ -15,7 +16,7 @@ class HistoryViewModel @Inject constructor(
     getAllPickUp: GetAllPickUp,
     getTotalBalance: GetTotalBalance,
     private val deletePickUp: DeletePickUp
-) {
+) : ViewModel() {
     var totalSaldo: LiveData<Int> = getTotalBalance()
     var pickUps: LiveData<List<PickUp>> = getAllPickUp()
 
