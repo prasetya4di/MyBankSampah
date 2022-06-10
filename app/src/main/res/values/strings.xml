@@ -3,6 +3,31 @@
     <string name="deskripsi_jenis">Sampah merupakan hasil produksi manusia yang tidak akan pernah luput dari kehidupan sehari-hari. Lalu, jenis-jenis sampah apa yang biasanya kita hasilkan? Yuk, kenali di sini.\n\nSampah jika dibiarkan saja akan mengganggu kebersihan lingkungan secara umum. Sampah dapat dibedakan menjadi dua macam, yaitu:</string>
     <string name="anorganik"><b>1. Sampah Padat (Anorganik)</b>\n\nSampah anorganik adalah sampah yang terdiri atas bahan-bahan anorganik. Contoh bahan-bahan anorganik adalah bahan logam, plastik, kaca, karet, dan kaleng. Sifat sampah anorganik adalah tahan lama dan sukar membusuk.\n\nSampah ini tidak mudah diuraikan oleh mikroorganisme tanah. Apabila dibuang sembarangan, sampah anorganik dapat menimbulkan pencemaran tanah.</string>
     <string name="organik"><b>2. Sampah Basah (Organik)</b>\n\nSampah organik adalah sampah yang terdiri atas bahan-bahan organik. Sifat sampah organik adalah tidak tahan lama dan cepat membusuk. Biasanya sampah jenis ini berasal dari makhluk hidup. Contohnya adalah sayur-sayuran, buah-buah yang membusuk, sisa nasi, daun, dan sebagainya.\n\nSampah organik mudah diuraikan mikroorganisme tanah. Hanya saja jenis sampah akan menimbulkan bau kurang sedap jika tidak dikelola dengan baik.</string>
+    <string name="txt_welcome">Selamat Datang</string>
+    <string name="txt_at_bank_sampah">DI BANK SAMPAH</string>
+    <string name="txt_sell_your_garbage">Tukarkan sampah plastikmu sekarang!</string>
+    <string name="txt_what_is_bank_sampah">Aplikasi Bank Sampah adalah solusi untuk menyelesaikan masalah sosial tentang kebersihan lingkungan.</string>
+    <string name="txt_category_menu">Menu Kategori</string>
+    <string name="txt_sampah_types">Jenis-jenis Sampah</string>
+    <string name="txt_pickup">Jemput Sampah</string>
+    <string name="txt_please_fill_with_real_data">Mohon isi data dibawah ini dengan benar</string>
+    <string name="label_username">Nama Pengguna</string>
+    <string name="placeholder_name">Masukan nama lengkap</string>
+    <string name="label_sampah_type">Kategori Sampah</string>
+    <string name="label_weight">Berat (Kg)</string>
+    <string name="placeholder_weight">5 Kg</string>
+    <string name="label_price">Harga (per Kg)</string>
+    <string name="placeholder_price">Rp. 1500/Kg</string>
+    <string name="label_date_pickup">Tanggal Penjemputan</string>
+    <string name="placeholder_date_pickup">Masukan tanggal</string>
+    <string name="label_address">Alamat</string>
+    <string name="placeholder_address">Masukan alamat</string>
+    <string name="label_note">Catatan Tambahan (Opsional)</string>
+    <string name="placeholder_note">Masukan catatan tambahan anda</string>
+    <string name="txt_btn_pickup_now">Jemput Sekarang</string>
+    <string name="txt_empty_history">Oops, riwayat masih kosong!</string>
+    <string name="txt_your_balance">Saldo Anda :</string>
+    <string name="txt_your_balance_and_history"><![CDATA[Saldo & Riwayat Anda]]></string>
     <string-array name="sampah_category">
         <item>Plastik</item>
         <item>Logam</item>
