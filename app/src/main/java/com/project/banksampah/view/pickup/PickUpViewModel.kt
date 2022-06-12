@@ -8,29 +8,45 @@ import com.project.banksampah.usecase.RequestPickUp
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.schedulers.Schedulers
+import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel
 class PickUpViewModel @Inject constructor(
     private val requestPickUp: RequestPickUp
 ) : ViewModel() {
+    private var _name: MutableLiveData<String> = MutableLiveData()
+    private var _pickUpDate: MutableLiveData<Date> = MutableLiveData()
+    private var _address: MutableLiveData<String> = MutableLiveData()
+    private var _note: MutableLiveData<String> = MutableLiveData()
     private var _weight: MutableLiveData<Int> = MutableLiveData()
     private var _totalPrice: MutableLiveData<Int> = MutableLiveData()
-    private var _selectedCategory: MutableLiveData<Int> = MutableLiveData()
+    private var _selectedCategory: MutableLiveData<String> = MutableLiveData()
     private var _pricePerKg: MutableLiveData<Int> = MutableLiveData()
 
     init {
         _totalPrice.value = 0
-        _selectedCategory.value = 0
         _pricePerKg.value = 0
     }
 
-    val totalPrice: LiveData<Int> = _totalPrice
-    val selectedCategory: LiveData<Int> = _selectedCategory
-    val pricePerKg: LiveData<Int> = _pricePerKg
-    val weight: LiveData<Int> = _weight
+    val name: LiveData<String>
+        get() = _name
+    val pickUpDate: LiveData<Date>
+        get() = _pickUpDate
+    val address: LiveData<String>
+        get() = _address
+    val note: LiveData<String>
+        get() = _note
+    val totalPrice: LiveData<Int>
+        get() = _totalPrice
+    val selectedCategory: LiveData<String>
+        get() = _selectedCategory
+    val pricePerKg: LiveData<Int>
+        get() = _pricePerKg
+    val weight: LiveData<Int>
+        get() = _weight
 
-    fun setSelectedCategory(selectedCategory: Int, pricePerKg: Int) {
+    fun setSelectedCategory(selectedCategory: String, pricePerKg: Int) {
         _selectedCategory.postValue(selectedCategory)
         _pricePerKg.postValue(pricePerKg)
         if (weight.value != null) {
@@ -45,24 +61,32 @@ class PickUpViewModel @Inject constructor(
         }
     }
 
-    fun addPickUp(
-        name: String,
-        type: String,
-        berat: Int,
-        harga: Int,
-        tanggal: String,
-        alamat: String,
-        catatan: String
-    ) {
+    fun setName(name: String) {
+        _name.postValue(name)
+    }
+
+    fun setPickUpDate(date: Date) {
+        _pickUpDate.postValue(date)
+    }
+
+    fun setAddress(address: String) {
+        _address.postValue(address)
+    }
+
+    fun setNote(note: String) {
+        _note.postValue(note)
+    }
+
+    fun addPickUp() {
         Completable.fromAction {
             val pickUp = PickUp(
-                name = name,
-                type = type,
-                berat = berat,
-                harga = harga,
-                tanggal = tanggal,
-                alamat = alamat,
-                catatan = catatan
+                name = name.value!!,
+                type = selectedCategory.value!!,
+                berat = weight.value!!,
+                harga = totalPrice.value!!,
+                tanggal = pickUpDate.value!!.toString(),
+                alamat = address.value!!.toString(),
+                catatan = note.value
             )
             requestPickUp(pickUp)
         }

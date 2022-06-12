@@ -31,5 +31,5 @@ class PickUp(
     var alamat: String,
 
     @ColumnInfo(name = "catatan")
-    var catatan: String
+    var catatan: String?
 ) : Parcelable
