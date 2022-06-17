@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import com.project.banksampah.R
 import com.project.banksampah.databinding.ActivityPickUpBinding
+import com.project.banksampah.util.Formatter
 import dagger.hilt.android.AndroidEntryPoint
 import java.text.SimpleDateFormat
 import java.util.*
@@ -23,6 +24,10 @@ class PickUpActivity : AppCompatActivity() {
         binding = ActivityPickUpBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        viewModel.pricePerKg.observeForever {
+            binding.inputPerKg.setText(Formatter.rupiahFormat(it))
+        }
         binding.inputName.doOnTextChanged { text, _, _, _ -> viewModel.setName(text.toString()) }
         binding.inputAddress.doOnTextChanged { text, _, _, _ -> viewModel.setAddress(text.toString()) }
         binding.inputNote.doOnTextChanged { text, _, _, _ -> viewModel.setNote(text.toString()) }
@@ -64,6 +69,7 @@ class PickUpActivity : AppCompatActivity() {
         }
         binding.btnCheckout.setOnClickListener {
             viewModel.addPickUp()
+            finish()
         }
     }
 }
