@@ -17,7 +17,7 @@ class HistoryViewModel @Inject constructor(
     getTotalBalance: GetTotalBalance,
     private val deletePickUp: DeletePickUp
 ) : ViewModel() {
-    var totalSaldo: LiveData<Int> = getTotalBalance()
+    var totalBalance: LiveData<Int> = getTotalBalance()
     var pickUps: LiveData<List<PickUp>> = getAllPickUp()
 
     fun deletePickUp(pickUp: PickUp) {
