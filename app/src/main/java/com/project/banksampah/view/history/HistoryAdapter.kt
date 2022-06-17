@@ -25,7 +25,7 @@ class HistoryAdapter(
         holder.binding.tvName.text = pickup.name
         holder.binding.tvDate.text = pickup.tanggal
         holder.binding.tvCategory.text = pickup.type
-        holder.binding.tvWeight.text = pickup.berat.toString()
+        holder.binding.tvWeight.text = "${pickup.berat} Kg"
         holder.binding.tvReceive.text = pickup.harga.toString()
         holder.binding.tvStatus.text = "Received"
     }
