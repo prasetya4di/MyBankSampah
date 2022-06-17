@@ -13,7 +13,7 @@ interface UserDao {
     fun getAll(): LiveData<List<User>>
 
     @Query("SELECT * FROM user LIMIT 1")
-    fun findById(uid: Int): LiveData<User>
+    fun getUser(): LiveData<User>
 
     @Insert
     fun insert(user: User)
