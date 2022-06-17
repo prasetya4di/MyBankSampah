@@ -16,7 +16,7 @@ class User(
     @ColumnInfo(name = "name")
     var name: String,
     @ColumnInfo(name = "phone")
-    var phoneNumber: String,
+    var phoneNumber: String?,
     @ColumnInfo(name = "photo_url")
-    var photoUrl: String,
+    var photoUrl: String?,
 ) : Parcelable
