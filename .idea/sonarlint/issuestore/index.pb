@@ -22,8 +22,6 @@ k
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 j
 :app/src/main/java/com/project/banksampah/util/Formatter.kt,3/0/30344804578d0429e609a9ed133a1d1019d37bbc
-o
-?app/src/main/java/com/project/banksampah/model/entity/PickUp.kt,5/9/599d6f3efc426dd355cadc7e9a9c71c615747e07
 p
 @app/src/main/java/com/project/banksampah/database/AppDatabase.kt,6/9/696620516331b3f252ec980cbec6efd00e60eb7c
 
@@ -42,8 +40,6 @@ s
 Capp/src/main/java/com/project/banksampah/usecase/GetTotalBalance.kt,9/b/9b991f1ca6a2d46968486f0ef2de8472723f9faa
 w
 Gapp/src/main/java/com/project/banksampah/repository/PickUpRepository.kt,e/2/e22d41f4dd9b328fefc109afd70e8f56a6e42e87
-n
->app/src/main/java/com/project/banksampah/view/MyApplication.kt,c/c/cc32cb6dcbf56994ceabdf2a7b985b902c1f7644
 X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 €
@@ -58,3 +54,11 @@ z
 Japp/src/main/java/com/project/banksampah/usecase/impl/RequestPickUpImpl.kt,e/b/ebf75c55818911832d815201ec3a997ce47649c3
 x
 Happ/src/main/java/com/project/banksampah/view/history/HistoryActivity.kt,2/9/293943edc77c74c9459d6db57101378a287cad9d
+w
+Gapp/src/main/java/com/project/banksampah/di/modules/RepositoryModule.kt,f/7/f7a572ae1832451a0116c6d39e437eeeb8c4494c
+t
+Dapp/src/main/java/com/project/banksampah/di/modules/UseCaseModule.kt,6/d/6d365095d9325113a1de3e2039422a51083d6ed4
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
+r
+Bapp/src/main/java/com/project/banksampah/view/main/MainActivity.kt,f/2/f2213706d3b01bc39e76a13d0106c9d3d58539ae
