@@ -34,6 +34,9 @@
     <string name="label_password">Password</string>
     <string name="txt_login">Login</string>
     <string name="txt_login_with">Or Login With</string>
+    <string name="txt_please_register">Silahkan melakukan pendaftaran untuk bisa menggunakan aplikasi</string>
+    <string name="txt_register">Register</string>
+    <string name="label_phone_number">No. Handphone</string>
     <string-array name="sampah_category">
         <item>Plastik</item>
         <item>Logam</item>
