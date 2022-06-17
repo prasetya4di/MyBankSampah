@@ -183,6 +183,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/view/login/LoginActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/view/main/MainActivity.kt">
           <value>
             <set />
@@ -194,6 +199,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/view/pickup/PickUpViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/view/register/RegisterActivity.kt">
           <value>
             <set />
           </value>
