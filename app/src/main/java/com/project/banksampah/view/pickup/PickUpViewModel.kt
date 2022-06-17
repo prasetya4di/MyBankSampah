@@ -84,7 +84,7 @@ class PickUpViewModel @Inject constructor(
                 type = selectedCategory.value!!,
                 berat = weight.value!!,
                 harga = totalPrice.value!!,
-                tanggal = pickUpDate.value!!.toString(),
+                tanggal = pickUpDate.value!!,
                 alamat = address.value!!.toString(),
                 catatan = note.value
             )
