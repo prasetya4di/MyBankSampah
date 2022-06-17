@@ -45,6 +45,11 @@ class PickUpViewModel @Inject constructor(
         get() = _pricePerKg
     val weight: LiveData<Int>
         get() = _weight
+    val isValid: Boolean
+        get() = (name.value != null)
+            .and(pickUpDate.value != null)
+            .and(address.value != null)
+            .and(weight.value != null)
 
     fun setSelectedCategory(selectedCategory: String, pricePerKg: Int) {
         _selectedCategory.postValue(selectedCategory)

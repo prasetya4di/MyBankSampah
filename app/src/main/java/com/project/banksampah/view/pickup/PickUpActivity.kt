@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.DatePicker
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
@@ -69,7 +70,10 @@ class PickUpActivity : AppCompatActivity() {
             ).show()
         }
         binding.btnCheckout.setOnClickListener {
-            viewModel.addPickUp()
+            when (viewModel.isValid) {
+                true -> viewModel.addPickUp()
+                false -> Toast.makeText(this, "Data belum lengkap", Toast.LENGTH_SHORT).show()
+            }
             finish()
         }
     }
