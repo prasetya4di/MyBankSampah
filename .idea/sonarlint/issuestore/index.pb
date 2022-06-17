@@ -6,16 +6,10 @@
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 z
 Japp/src/androidTest/java/com/project/banksampah/ExampleInstrumentedTest.kt,8/a/8ad314e2cc9bc93e5e38623c4370a3c3dc54a258
-A
-gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4
-?
-settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
 7
 gradlew,5/b/5bbfa66edb4db3c7c33c5181f43510990d3307f9
 ;
 gradlew.bat,2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3
-F
-app/proguard-rules.pro,9/e/9e08934d811afe28fbc77aaa3c0d747b94348db9
 k
 ;app/src/test/java/com/project/banksampah/ExampleUnitTest.kt,f/a/fad38d24562a8de510cebec29ab00c22128deb62
 q
@@ -42,7 +36,3 @@ z
 Japp/src/main/java/com/project/banksampah/usecase/impl/RequestPickUpImpl.kt,e/b/ebf75c55818911832d815201ec3a997ce47649c3
 t
 Dapp/src/main/java/com/project/banksampah/di/modules/UseCaseModule.kt,6/d/6d365095d9325113a1de3e2039422a51083d6ed4
-P
- app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-r
-Bapp/src/main/java/com/project/banksampah/view/main/MainActivity.kt,f/2/f2213706d3b01bc39e76a13d0106c9d3d58539ae
