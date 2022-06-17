@@ -1,8 +1,12 @@
 package com.project.banksampah.view.main
 
+import android.Manifest.permission.ACCESS_COARSE_LOCATION
+import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.content.Intent
 import android.location.Geocoder
 import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.project.banksampah.databinding.ActivityMainBinding
 import com.project.banksampah.view.history.HistoryActivity
@@ -37,6 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setLocation() {
         simpleLocation = SimpleLocation(this)
+        requestLocationPermission()
         if (!simpleLocation.hasLocationEnabled()) {
             SimpleLocation.openSettings(this)
         }
@@ -52,5 +57,31 @@ class MainActivity : AppCompatActivity() {
         } catch (e: IOException) {
             e.printStackTrace()
         }
+    }
+
+    private fun requestLocationPermission() {
+        val locationPermissionRequest = registerForActivityResult(
+            ActivityResultContracts.RequestMultiplePermissions()
+        ) { permissions ->
+            when {
+                permissions.getOrDefault(ACCESS_FINE_LOCATION, false) -> {
+                    // Precise location access granted.
+                }
+                permissions.getOrDefault(ACCESS_COARSE_LOCATION, false) -> {
+                    // Only approximate location access granted.
+                }
+                else -> {
+                    Toast.makeText(this, "Tidak bisa mendapatkan akses lokasi", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+        }
+
+        locationPermissionRequest.launch(
+            arrayOf(
+                ACCESS_FINE_LOCATION,
+                ACCESS_COARSE_LOCATION
+            )
+        )
     }
 }
