@@ -5,8 +5,7 @@ import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.content.Intent
 import android.location.Geocoder
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.project.banksampah.databinding.ActivityMainBinding
 import com.project.banksampah.view.history.HistoryActivity
@@ -14,6 +13,7 @@ import com.project.banksampah.view.jenissampah.SampahTypeActivity
 import com.project.banksampah.view.pickup.PickUpActivity
 import dagger.hilt.android.AndroidEntryPoint
 import im.delight.android.location.SimpleLocation
+import pub.devrel.easypermissions.EasyPermissions
 import java.io.IOException
 import java.util.*
 
@@ -27,7 +27,11 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        setLocation()
+        if (EasyPermissions.hasPermissions(this, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION)) {
+            setLocation()
+        } else {
+            binding.layoutLocation.visibility = View.GONE
+        }
         binding.content.cvPickup.setOnClickListener {
             startActivity(Intent(this, PickUpActivity::class.java))
         }
@@ -41,7 +45,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setLocation() {
         simpleLocation = SimpleLocation(this)
-        requestLocationPermission()
         if (!simpleLocation.hasLocationEnabled()) {
             SimpleLocation.openSettings(this)
         }
@@ -57,31 +60,5 @@ class MainActivity : AppCompatActivity() {
         } catch (e: IOException) {
             e.printStackTrace()
         }
-    }
-
-    private fun requestLocationPermission() {
-        val locationPermissionRequest = registerForActivityResult(
-            ActivityResultContracts.RequestMultiplePermissions()
-        ) { permissions ->
-            when {
-                permissions.getOrDefault(ACCESS_FINE_LOCATION, false) -> {
-                    // Precise location access granted.
-                }
-                permissions.getOrDefault(ACCESS_COARSE_LOCATION, false) -> {
-                    // Only approximate location access granted.
-                }
-                else -> {
-                    Toast.makeText(this, "Tidak bisa mendapatkan akses lokasi", Toast.LENGTH_SHORT)
-                        .show()
-                }
-            }
-        }
-
-        locationPermissionRequest.launch(
-            arrayOf(
-                ACCESS_FINE_LOCATION,
-                ACCESS_COARSE_LOCATION
-            )
-        )
     }
 }

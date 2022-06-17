@@ -24,9 +24,7 @@ class HistoryActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         binding.rvHistory.layoutManager = layoutManager
         viewModel.totalBalance.observeForever {
-            if (it != null) {
-                binding.tvReceive.text = Formatter.rupiahFormat(it)
-            }
+            binding.tvReceive.text = Formatter.rupiahFormat(it ?: 0)
         }
         viewModel.pickUps.observeForever {
             val adapter = HistoryAdapter(it, object : HistoryAdapter.HistoryAdapterCallback {

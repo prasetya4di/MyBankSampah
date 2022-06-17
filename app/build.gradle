@@ -46,6 +46,7 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.38.1"
     implementation "androidx.fragment:fragment-ktx:1.4.1"
     implementation 'com.github.delight-im:Android-SimpleLocation:v1.1.0'
+    implementation 'pub.devrel:easypermissions:3.0.0'
     kapt "com.google.dagger:hilt-compiler:2.38.1"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
