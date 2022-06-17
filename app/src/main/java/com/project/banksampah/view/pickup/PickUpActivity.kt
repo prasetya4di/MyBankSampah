@@ -25,6 +25,7 @@ class PickUpActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.toolbar.setOnClickListener { onBackPressed() }
         viewModel.pricePerKg.observeForever {
             binding.inputPerKg.setText(Formatter.rupiahFormat(it))
         }

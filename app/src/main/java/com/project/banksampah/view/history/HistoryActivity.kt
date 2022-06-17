@@ -19,6 +19,7 @@ class HistoryActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.toolbar.setOnClickListener { onBackPressed() }
         val layoutManager = LinearLayoutManager(this)
         binding.rvHistory.layoutManager = layoutManager
         viewModel.totalBalance.observeForever {

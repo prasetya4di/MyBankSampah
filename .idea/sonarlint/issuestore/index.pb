@@ -18,8 +18,6 @@ F
 app/proguard-rules.pro,9/e/9e08934d811afe28fbc77aaa3c0d747b94348db9
 k
 ;app/src/test/java/com/project/banksampah/ExampleUnitTest.kt,f/a/fad38d24562a8de510cebec29ab00c22128deb62
-
-Oapp/src/main/java/com/project/banksampah/view/jenissampah/SampahTypeActivity.kt,8/7/87128a88da9cd649b48e75b78240efd10e627883
 q
 Aapp/src/main/java/com/project/banksampah/usecase/RequestPickUp.kt,7/7/771244157094ab0670cb54740c0a82e29e32c4de
 p
