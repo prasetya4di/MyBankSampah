@@ -29,6 +29,11 @@
     <string name="txt_your_balance">Saldo Anda :</string>
     <string name="txt_your_balance_and_history"><![CDATA[Saldo & Riwayat Anda]]></string>
     <string name="location_racionale">Aplikasi Bank Sampah perlu mendapat ijin untuk mengakses lokasi anda untuk mempermudah penjemputan</string>
+    <string name="txt_please_login">Silahkan login untuk menggunakan aplikasi</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_login_with">Or Login With</string>
     <string-array name="sampah_category">
         <item>Plastik</item>
         <item>Logam</item>

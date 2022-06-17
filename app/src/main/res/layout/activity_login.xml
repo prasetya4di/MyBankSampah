@@ -23,14 +23,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome"
+            android:text="@string/txt_welcome"
             android:textColor="@color/white"
             android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Silahkan login untuk menggunakan aplikasi"
+            android:text="@string/txt_please_login"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
-            android:text="Email"
+            android:text="@string/label_email"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="26dp"
-            android:text="Password"
+            android:text="@string/label_password"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -70,7 +70,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="25dp"
             android:backgroundTint="@color/colorPrimary"
-            android:text="Login" />
+            android:text="@string/txt_login" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -90,7 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="Or Login With"
+                android:text="@string/txt_login_with"
+                android:textSize="12sp"
                 android:textColor="#60FFFFFF" />
 
             <View
