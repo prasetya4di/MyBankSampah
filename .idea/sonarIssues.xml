@@ -33,6 +33,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/project/banksampah/model/entity/PickUp.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/project/banksampah/view/pickup/PickUpActivity.java">
           <value>
             <set />
@@ -139,6 +144,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/usecase/impl/RequestPickUpImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/project/banksampah/util/Converters.kt">
           <value>
             <set />
           </value>

@@ -38,8 +38,6 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 €
 Papp/src/main/java/com/project/banksampah/repository/impl/PickUpRepositoryImpl.kt,0/7/071b711fa157dc9d94a3a3e783378e90781370f8
-w
-Gapp/src/main/java/com/project/banksampah/data/local/pickup/PickUpDao.kt,c/0/c09360f9bda1605d734e3e4b0652a641d37b2040
 |
 Lapp/src/main/java/com/project/banksampah/usecase/impl/GetTotalBalanceImpl.kt,9/7/97413dd6ae920045a57bb4af9b5696b0b474f02f
 z
