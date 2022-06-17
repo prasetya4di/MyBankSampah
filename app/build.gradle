@@ -48,8 +48,6 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:1.4.1"
     implementation 'com.github.delight-im:Android-SimpleLocation:v1.1.0'
     implementation 'pub.devrel:easypermissions:3.0.0'
-    implementation platform('com.google.firebase:firebase-bom:30.1.0')
-    implementation 'com.google.firebase:firebase-analytics-ktx'
     kapt "com.google.dagger:hilt-compiler:2.38.1"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -62,4 +60,9 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-rxjava3:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
+
+    //Firebase dependencies
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx'
 }
