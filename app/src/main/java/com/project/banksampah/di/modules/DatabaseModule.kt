@@ -3,6 +3,7 @@ package com.project.banksampah.di.modules
 import android.content.Context
 import androidx.room.Room
 import com.project.banksampah.data.local.pickup.PickUpDao
+import com.project.banksampah.data.local.user.UserDao
 import com.project.banksampah.database.AppDatabase
 import dagger.Module
 import dagger.Provides
@@ -17,6 +18,11 @@ class DatabaseModule {
     @Provides
     fun provideChannelDao(appDatabase: AppDatabase): PickUpDao {
         return appDatabase.pickUpDao()
+    }
+
+    @Provides
+    fun provideUserDao(appDatabase: AppDatabase): UserDao {
+        return appDatabase.userDao()
     }
 
     @Provides
