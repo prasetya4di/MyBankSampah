@@ -131,7 +131,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/tvKategori"
+                                android:id="@+id/tvCategory"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/label_sampah_type"
@@ -142,7 +142,7 @@
                                 android:id="@+id/spKategori"
                                 android:layout_width="match_parent"
                                 android:layout_height="45dp"
-                                android:layout_below="@+id/tvKategori"
+                                android:layout_below="@+id/tvCategory"
                                 android:layout_marginTop="10dp"
                                 android:background="@drawable/spinner_background"
                                 android:entries="@array/sampah_category"
@@ -151,7 +151,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/tvKategori"
+                                android:layout_below="@+id/tvCategory"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
                                 android:layout_gravity="center"

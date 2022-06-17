@@ -18,7 +18,7 @@
         android:padding="15dp">
 
         <TextView
-            android:id="@+id/tvNama"
+            android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -41,7 +41,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvKategori"
+                android:id="@+id/tvCategory"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -57,14 +57,14 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvBerat"
+                    android:id="@+id/tvWeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvSaldo"
+                    android:id="@+id/tvReceive"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
