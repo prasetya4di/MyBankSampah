@@ -2,6 +2,7 @@ package com.project.banksampah.view.history
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.banksampah.databinding.ActivityHistoryBinding
@@ -30,7 +31,12 @@ class HistoryActivity : AppCompatActivity() {
         viewModel.pickUps.observeForever {
             val adapter = HistoryAdapter(it, object : HistoryAdapter.HistoryAdapterCallback {
                 override fun onDelete(pickup: PickUp) {
-                    viewModel.deletePickUp(pickup)
+                    AlertDialog.Builder(this@HistoryActivity)
+                        .setTitle("Konfirmasi Hapus")
+                        .setMessage("Apakah anda yakin akan menghapus ${pickup.uid} - ${pickup.name}")
+                        .setPositiveButton("YES") { _, _ -> viewModel.deletePickUp(pickup) }
+                        .setNegativeButton("NO") { _, _ -> }
+                        .show()
                 }
             })
             binding.rvHistory.adapter = adapter

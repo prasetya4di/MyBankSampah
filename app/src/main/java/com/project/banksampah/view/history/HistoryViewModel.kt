@@ -15,14 +15,14 @@ import javax.inject.Inject
 class HistoryViewModel @Inject constructor(
     getAllPickUp: GetAllPickUp,
     getTotalBalance: GetTotalBalance,
-    private val deletePickUp: DeletePickUp
+    private val deletePickUpUseCase: DeletePickUp
 ) : ViewModel() {
     var totalBalance: LiveData<Int> = getTotalBalance()
     var pickUps: LiveData<List<PickUp>> = getAllPickUp()
 
     fun deletePickUp(pickUp: PickUp) {
         Completable.fromAction {
-            deletePickUp(pickUp)
+            deletePickUpUseCase(pickUp)
         }
             .subscribeOn(Schedulers.io())
             .observeOn(Schedulers.single())
