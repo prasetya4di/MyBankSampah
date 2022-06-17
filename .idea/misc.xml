@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_back.xml" value="0.2005" />
         <entry key="app/src/main/res/drawable-v24/ic_location.xml" value="0.2005" />
         <entry key="app/src/main/res/drawable/auth_darken_bg.xml" value="0.2005" />
+        <entry key="app/src/main/res/drawable/auth_text_border.xml" value="0.2005" />
         <entry key="app/src/main/res/layout/activity_history.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33958333333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34322916666666664" />
